@@ -56,7 +56,7 @@ Optimum.KernelC <- function(inputdata, groupid, nhavepi, givenpi, givenpiT, nite
 	
                 s0 = sg0 + 0.0
                 m0 = mu0 + 0.0
-                rres <- .C("Tdemix", dataarray1, as.integer(groupid), as.integer(nsub), as.integer(wgenes), as.integer(nhavepi), givenpi1, givenpi2, givenpi3, as.integer(nCid), as.integer(niter), as.integer(ninteg), tol, as.integer(nthread), s0, m0, integral_option, rep(0, 2*intx),  rep(0, intx*wgenes), rep(0, niter*wgenes), rep(0, niter*wgenes), rep(0, niter*intx), rep(0, niter*intx), rep(0,niter), rep(0, intx*wgenes), rep(0, intx*wgenes))
+                rres <- .C("Tdemix", dataarray1, as.integer(groupid), as.integer(nsub), as.integer(wgenes), as.integer(nhavepi), givenpi1, givenpi2, givenpi3, as.integer(nCid), as.integer(niter), as.integer(ninteg), tol, as.integer(nthread), s0, m0, as.integer(integral_option), rep(0, 2*intx),  rep(0, intx*wgenes), rep(0, niter*wgenes), rep(0, niter*wgenes), rep(0, niter*intx), rep(0, niter*intx), rep(0,niter), rep(0, intx*wgenes), rep(0, intx*wgenes))
                 obj<-rres[[22+1]]
                 print(obj)
                 
