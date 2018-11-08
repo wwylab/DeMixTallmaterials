@@ -40,15 +40,15 @@ DeMixT(data.Y, data.comp1, data.comp2 = NULL, niter = 10, nbin = 50,
   
  \item{pi.iter}{Estimated proportions in each iteration. It is a \eqn{number of iteration X Sy X 1} array in two-component setting, and a \eqn{number_of_iteration X Sy X 2} array in three-component setting. This is enabled only when output.more.info = TRUE.}
  
-  \item{decovExprT}{Matrix of deconvolved expression profiles corresponding to T-component in mixed samples for a given subset of genes. Each row corresponds to one gene and each column corresponds to one sample.}  
+  \item{ExprT}{Matrix of deconvolved expression profiles corresponding to T-component in mixed samples for a given subset of genes. Each row corresponds to one gene and each column corresponds to one sample.}  
   
-  \item{decovExprN1}{Matrix of deconvolved expression profiles corresponding to N1-component in mixed samples for a given subset of genes. Each row corresponds to one gene and each column corresponds to one sample.} 
+  \item{ExprN1}{Matrix of deconvolved expression profiles corresponding to N1-component in mixed samples for a given subset of genes. Each row corresponds to one gene and each column corresponds to one sample.} 
   
-  \item{decovExprN2}{Matrix of deconvolved expression profiles corresponding to N2-component in mixed samples for a given subset of genes in a three-component setting. Each row corresponds to one gene and each column corresponds to one sample.} 
+  \item{ExprN2}{Matrix of deconvolved expression profiles corresponding to N2-component in mixed samples for a given subset of genes in a three-component setting. Each row corresponds to one gene and each column corresponds to one sample.} 
  
-  \item{decovMu}{Estimated \eqn{\mu} of log2-normal distribution for both known (\eqn{MuN1, MuN2}) and unknown component (\eqn{MuT}).}
+  \item{Mu}{Estimated \eqn{\mu} of log2-normal distribution for both known (\eqn{MuN1, MuN2}) and unknown component (\eqn{MuT}).}
   
-  \item{decovSigma}{Estimated \eqn{\sigma} of log2-normal distribution for both known (\eqn{SigmaN1, SigmaN2}) and unknown component (\eqn{SigmaT}).}
+  \item{Sigma}{Estimated \eqn{\sigma} of log2-normal distribution for both known (\eqn{SigmaN1, SigmaN2}) and unknown component (\eqn{SigmaT}).}
  
   \item{gene.name}{The names of genes used in estimating the proportions. If no gene names are rpovided in the original data set, the genes will be automatically indexed. This is enabled only when output.more.info = TRUE.}
 }
@@ -64,10 +64,10 @@ Zeya Wang, Wenyi Wang
  data(test.data1)
  res <- DeMixT(data.Y = test.data1$y, data.comp1 = test.data1$comp1, if.filter = FALSE, output.more.info = TRUE)
  res$pi
- head(res$decovExprT, 3)
- head(res$decovExprN1, 3)
- head(res$decovMu, 3)
- head(res$decovSigma, 3)
+ head(res$ExprT, 3)
+ head(res$ExprN1, 3)
+ head(res$Mu, 3)
+ head(res$Sigma, 3)
  res$pi.iter
  res$gene.name
 	
