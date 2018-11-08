@@ -64,10 +64,10 @@ Zeya Wang, Wenyi Wang
  data(test.data1)
  res <- DeMixT(data.Y = test.data1$y, data.comp1 = test.data1$comp1, if.filter = FALSE, output.more.info = TRUE)
  res$pi
- head(res$decovExprT, 3)
- head(res$decovExprN1, 3)
- head(res$decovMu, 3)
- head(res$decovSigma, 3)
+ head(res$ExprT, 3)
+ head(res$ExprN1, 3)
+ head(res$Mu, 3)
+ head(res$Sigma, 3)
  res$pi.iter
  res$gene.name
 	
