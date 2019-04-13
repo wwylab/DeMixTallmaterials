@@ -64,7 +64,7 @@ DeMixT.S1 <- function(data.Y, data.comp1, data.comp2 = NULL,
   if(if.filter == FALSE){
     gene.name <- rownames(inputdata)
     res <- Optimum.KernelC(inputdata, groupid, nhavepi = 0, givenpi = rep(0, 2 * ncol(data.y)), givenpiT = rep(0, ncol(data.y)), 
-                           niter = niter, ninteg = nbin, tol = tol)
+                           niter = niter, ninteg = nbin, tol = tol, nthread = nthread)
   } else {
     
   }
@@ -84,7 +84,7 @@ DeMixT.S1 <- function(data.Y, data.comp1, data.comp2 = NULL,
     # 
     gene.name <- rownames(inputdata2)
     res <- Optimum.KernelC(inputdata2, groupid, nhavepi = 0, givenpi = rep(0, 2 * ncol(data.y)), givenpiT = rep(0, ncol(data.y)), 
-                           niter = niter, ninteg = nbin, tol = tol)
+                           niter = niter, ninteg = nbin, tol = tol, nthread = nthread)
   }
   
   ## case 3: two-stage filtering
@@ -109,7 +109,7 @@ DeMixT.S1 <- function(data.Y, data.comp1, data.comp2 = NULL,
     cnvgroup <- groupid; cnvgroup[groupid == 2] <- 1 # combine 3-component to 2-component
     #
     res1 <- Optimum.KernelC(inputdatamat2, cnvgroup, nhavepi = 0, givenpi = rep(0, ncol(data.y)), givenpiT = rep(0,ncol(data.y)), 
-                            niter = niter, ninteg = nbin, tol = tol)
+                            niter = niter, ninteg = nbin, tol = tol, nthread = nthread)
     fixed.piT <- 1 - as.numeric(res1$pi[1, ])
     cat("Filtering stage 1 is finished\n")
 
@@ -130,7 +130,7 @@ DeMixT.S1 <- function(data.Y, data.comp1, data.comp2 = NULL,
     #
     gene.name <- rownames(inputdatamat3)
     res <- Optimum.KernelC(inputdatamat3, groupid, nhavepi = 2, givenpi = rep(0, 2 * ncol(data.Y)), givenpiT = fixed.piT, 
-                           niter = niter, ninteg = nbin, tol = tol)
+                           niter = niter, ninteg = nbin, tol = tol, nthread = nthread)
     cat("Filtering stage 2 is finished")
   }
   
