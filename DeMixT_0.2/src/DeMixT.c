@@ -51,6 +51,8 @@ void Tdemix(double *data, int *nGroup, int *nsamp, int *ngenes, int *npi, double
     double ss0 = *s0;
     double mm0 = *m0;
     
+  // set the number of threads
+  omp_set_num_threads(nthread);
 
   //get value from input parameter
   nS=*nsamp;            // Number of Samples
