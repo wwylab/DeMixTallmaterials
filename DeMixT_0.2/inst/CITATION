@@ -1,4 +1,4 @@
-citHeader("To cite package "DeMixT" in publications use:")
+citHeader("To cite package DeMixT in publications use:")
 
 citEntry(entry = "Article",
   title        = "Transcriptome Deconvolution of Heterogeneous Tumor Samples with Immune Infiltration",
