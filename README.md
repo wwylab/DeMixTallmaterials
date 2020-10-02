@@ -1,6 +1,6 @@
 Transcriptomic deconvolution in cancer and other heterogeneous tissues remains challenging. Available methods lack the ability to estimate both component-specific proportions and expression profiles for individual samples. We present DeMixT, a new tool to deconvolve high dimensional data from mixtures of more than two components. DeMixT implements an iterated conditional mode algorithm and a novel gene-set-based component merging approach to improve accuracy. In a series of experimental validation studies and application to TCGA data, DeMixT showed high accuracy. Improved deconvolution is an important step towards linking tumor transcriptomic data with clinical outcomes. An R package, scripts and data are available.
 
-# This is the Github directory for older versions of DeMixT. Please visit github/wwylab/DeMixT for the lastest version. 
+# This is the Github directory for older versions of DeMixT. Please visit github.com/wwylab/DeMixT for the lastest version. 
 
 # DeMixT
 A deconvolution framework for mixed transcriptomes from heterogeneous tumor samples with two or three components using expression data from RNAseq or microarray platforms
