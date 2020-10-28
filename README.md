@@ -32,8 +32,16 @@ http://bioinformatics.mdanderson.org/main/DeMixT
 # How to install OpenMP
 We provide a brief instruction for installing OpenMP, which is needed to enable the parallel computing for DeMixT. Please check the file "How_to_install_OpenMP.pdf".
 
+# Reference profile data from the GTEx study 
+The Genotype-Tissue Expression (GTEx) project provides a comprehensive public resource to study tissue-specific gene expression and regulation [1]. RNA sequencing data from 42 normal prostate samples, 67 normal thyroid samples and 20 normal
+lung samples without significant pathology in the corresponding tissue types are downloaded. For more information on how DeMixT uses unmatched reference profile data from the GTEx study, please refer to the vignette and our recent bioRxiv preprint [2].
+
 # Mixed cell line data
 This data set is used in our validation experiment for DeMixT. To generate this dataset in RNA-seq, we performed a mixing experiment, in which we mixed mRNAs from three cell lines: lung adenocarcinoma in humans (H1092), cancer-associated fibroblasts (CAFs) and tumor infiltrating lymphocytes (TIL), at different proportions to generate 32 samples, including 9 samples that correspond to three repeats of a pure cell line sample for three cell lines. The RNA amount of each tissue in the mixture samples was calculated on the basis of real RNA concentrations tested in the biologist’s lab.
 
 Knitr documentation for the DeMixT paper (Wang et al.) can be downloaded from the website:
 http://bioinformatics.mdanderson.org/Software/DeMixT/online_methods.html.
+
+# Reference
+[1] GTEx Consortium. "The Genotype-Tissue Expression (GTEx) pilot analysis: Multitissue gene regulation in humans." Science 348.6235 (2015): 648-660.
+[2] Cao, Shaolong, et al. "Differing total mRNA expression shapes the molecular and clinical phenotype of cancer." bioRxiv (2020).
